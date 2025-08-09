@@ -2,10 +2,13 @@ function convertidorT(C){
     return C*(9/5)+32
 };
 
-function resolvedor(a,b,c){
+function resolvedor(a,b,c,op){
     let discriminante = b**2-4*a*c
     if (discriminante>0){
-        return [(-b+(discriminante)**(1/2))/2*a, (-b-(discriminante)**(1/2))/2*a]
+        if(op){
+            return (-b+(discriminante)**(1/2))/2*a
+        };
+        return(-b-(discriminante)**(1/2))/2*a
     };
     if(discriminante = 0){
         return -b/(2*a)
@@ -14,7 +17,7 @@ function resolvedor(a,b,c){
 };
 
 function mejorParidad(num){
-    return num%2 === 0 ? "Par":"impar" 
+    return num%2 === 0
 };
 
 function peorParidad(num){
@@ -36,7 +39,8 @@ console.log(convertidorT(100));
 
 console.log("Resolvedor");
 console.log("-----------------------------");
-console.log(resolvedor(1,5,4));
+console.log(resolvedor(1,5,4,true));
+console.log(resolvedor(1,5,4,false));
 
 console.log("mejorParidad");
 console.log("-----------------------------");
