@@ -42,11 +42,4 @@ function missingNumbers(arr){
 }
 
 
-Numeros = [3,10,-1,4,-5]
-console.log(findMax(Numeros));
-console.log(findMin(Numeros));
-console.log(includes(Numeros,2));
-console.log(sum(Numeros));
-
-console.log(missingNumbers(Numeros));
 
