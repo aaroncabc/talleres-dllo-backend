@@ -2,9 +2,6 @@ import { db } from "../utils/db.js";
 import { generateToken } from "../utils/auth.js";
 
 
-/**
- * CREATE USER (registro)
- */
 export function createUser(data) {
   const { email, password, name, permissions = {} } = data;
 
